@@ -15,6 +15,7 @@
 		533D977E1CAEEFF5003D4650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533D977C1CAEEFF5003D4650 /* LaunchScreen.storyboard */; };
 		533D97891CAEEFF5003D4650 /* rssReaderSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D97881CAEEFF5003D4650 /* rssReaderSampleTests.swift */; };
 		533D97941CAEEFF5003D4650 /* rssReaderSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D97931CAEEFF5003D4650 /* rssReaderSampleUITests.swift */; };
+		53D861B21CAEF46E00165C87 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D861B11CAEF46E00165C87 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		533D978F1CAEEFF5003D4650 /* rssReaderSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rssReaderSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		533D97931CAEEFF5003D4650 /* rssReaderSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rssReaderSampleUITests.swift; sourceTree = "<group>"; };
 		533D97951CAEEFF5003D4650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D861B11CAEF46E00165C87 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				533D97701CAEEFF5003D4650 /* AppDelegate.swift */,
-				533D97721CAEEFF5003D4650 /* ViewController.swift */,
+				53D861B11CAEF46E00165C87 /* Item.swift */,
+				53D861B01CAEF24200165C87 /* ViewModel */,
+				53D861AF1CAEF23400165C87 /* ViewController */,
 				533D97741CAEEFF5003D4650 /* Main.storyboard */,
 				533D977A1CAEEFF5003D4650 /* Assets.xcassets */,
 				533D977C1CAEEFF5003D4650 /* LaunchScreen.storyboard */,
@@ -126,6 +130,21 @@
 				533D97951CAEEFF5003D4650 /* Info.plist */,
 			);
 			path = rssReaderSampleUITests;
+			sourceTree = "<group>";
+		};
+		53D861AF1CAEF23400165C87 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				533D97721CAEEFF5003D4650 /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		53D861B01CAEF24200165C87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D861B21CAEF46E00165C87 /* Item.swift in Sources */,
 				533D97731CAEEFF5003D4650 /* ViewController.swift in Sources */,
 				533D97791CAEEFF5003D4650 /* rssReaderSample.xcdatamodeld in Sources */,
 				533D97711CAEEFF5003D4650 /* AppDelegate.swift in Sources */,
@@ -488,6 +508,7 @@
 				533D979A1CAEEFF5003D4650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		533D979B1CAEEFF5003D4650 /* Build configuration list for PBXNativeTarget "rssReaderSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +517,7 @@
 				533D979D1CAEEFF5003D4650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		533D979E1CAEEFF5003D4650 /* Build configuration list for PBXNativeTarget "rssReaderSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +526,7 @@
 				533D97A01CAEEFF5003D4650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
