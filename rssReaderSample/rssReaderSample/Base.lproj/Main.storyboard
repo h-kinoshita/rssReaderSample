@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Feed View Controller-->
@@ -18,12 +19,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EPv-rC-065">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EPv-rC-065">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EPv-rC-065" secondAttribute="height" multiplier="375:667" id="ZXI-KU-6j4"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="140" id="0Xm-u5-8JT" customClass="CustomTableViewCell" customModule="rssReaderSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Xm-u5-8JT" id="G2Y-1A-Fah">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Picture" translatesAutoresizingMaskIntoConstraints="NO" id="IsR-Rm-vJv">
+                                                    <rect key="frame" x="18" y="20" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="IsR-Rm-vJv" secondAttribute="height" multiplier="1:1" id="CFg-9B-oln"/>
+                                                        <constraint firstAttribute="height" constant="100" id="VVn-Hj-MyZ"/>
+                                                        <constraint firstAttribute="width" constant="100" id="wpk-rJ-wwx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7Q-7b-qbg">
+                                                    <rect key="frame" x="128" y="28" width="249" height="20"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IsR-Rm-vJv" firstAttribute="centerY" secondItem="G2Y-1A-Fah" secondAttribute="centerY" id="Siz-du-Naf"/>
+                                                <constraint firstItem="W7Q-7b-qbg" firstAttribute="leading" secondItem="IsR-Rm-vJv" secondAttribute="trailing" constant="10" id="Vd3-9o-kzK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="W7Q-7b-qbg" secondAttribute="trailing" constant="-10" id="dsN-ji-hGf"/>
+                                                <constraint firstItem="W7Q-7b-qbg" firstAttribute="top" secondItem="G2Y-1A-Fah" secondAttribute="topMargin" constant="20" id="rUf-up-OVW"/>
+                                                <constraint firstItem="IsR-Rm-vJv" firstAttribute="leading" secondItem="G2Y-1A-Fah" secondAttribute="leadingMargin" constant="10" id="zGY-KW-Nzb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="picture" destination="IsR-Rm-vJv" id="mcL-Eg-Ajc"/>
+                                            <outlet property="title" destination="W7Q-7b-qbg" id="hUZ-oG-sYT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="UWm-O8-a9J"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="qXn-UX-EWD"/>
@@ -48,4 +86,7 @@
             <point key="canvasLocation" x="179.5" y="451.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Picture" width="100" height="100"/>
+    </resources>
 </document>
