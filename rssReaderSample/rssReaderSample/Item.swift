@@ -12,5 +12,5 @@ class Item {
     
     var title : String!
     var url : String!
-    
+    var picture : String?
 }
