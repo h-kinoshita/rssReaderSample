@@ -10,7 +10,7 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate {
     
-    let feedUrl : NSURL = NSURL(string: "http://rss.dailynews.yahoo.co.jp/fc/rss.xml")!
+    let feedUrl : NSURL = NSURL(string: "http://news.yahoo.co.jp/pickup/computer/rss.xml")!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
